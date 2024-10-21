@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Comparison Dashboard</title>
+    <link rel="stylesheet" href="new.css">
+
+    
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <!-- Samsung Logo -->
+            <img src="samsung-logo.png" alt="Samsung Logo" class="logo">
+        </div>
+        <div class="navbar-center">
+            <!-- Search Bar -->
+            <input type="text" placeholder="Search..." class="search-bar">
+        </div>
+        <div class="navbar-right">
+            <!-- Previous Image Button with Link -->
+            <a href="previous-image-link.html" class="previous-image-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+                Previous Image
+            </a>
+        </div>
+    </nav>
+
+    <!-- Tabs Section -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="switchTab('processing')">Image Processing</button>
+        <button class="tab-button" onclick="switchTab('comparison')">Comparative Evaluation</button>
+    </div>
+
+    <!-- Processing Tab Content -->
+    <div id="processing" class="tab-content active">
+        <div class="upload-section">
+            <div class="upload-container">
+                <!-- Image preview placeholder -->
+                <img src="imgae.jpg" alt="Preview" class="preview-image">
+                <button class="upload-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                    </svg>
+                    Upload Image
+                </button>
+            </div>
+        </div>
+
+        <!-- Output Grid for Image Processing -->
+        <div class="output-grid">
+            <!-- Samsung Card -->
+            <div class="output-card samsung-card">
+                <div class="card-header">Samsung Galaxy Enhance-X</div>
+                <div class="output-image">
+                    <img src="imgae.jpg" alt="Samsung Image">
+                </div>
+                <div class="objective-section">
+                    <h3>Objective Scores</h3>
+                    <div class="metric-row">
+                        <span>Sharpness:</span>
+                        <span>80</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Brightness:</span>
+                        <span>90</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Blur:</span>
+                        <span>30</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Denoise:</span>
+                        <span>75</span>
+                    </div>
+                </div>
+                <div class="subjective-section">
+                    <h3>Subjective Score</h3>
+                    <div class="subjective-score">85</div>
+                </div>
+                <div class="total-score-section">
+                    <h3>Total Score</h3>
+                    <div class="total-score">82.5</div>
+                </div>
+                <button class="view-details-btn">View Details</button>
+            </div>
+
+            <!-- Snapseed Card -->
+            <div class="output-card snapseed-card">
+                <div class="card-header">Snapseed</div>
+                <div class="output-image">
+                    <img src="imgae.jpg" alt="Snapseed Image">
+                </div>
+                <div class="objective-section">
+                    <h3>Objective Scores</h3>
+                    <div class="metric-row">
+                        <span>Sharpness:</span>
+                        <span>75</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Brightness:</span>
+                        <span>85</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Blur:</span>
+                        <span>95</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Denoise:</span>
+                        <span>65</span>
+                    </div>
+                </div>
+                <div class="subjective-section">
+                    <h3>Subjective Score</h3>
+                    <div class="subjective-score">90</div>
+                </div>
+                <div class="total-score-section">
+                    <h3>Total Score</h3>
+                    <div class="total-score">82.5</div>
+                </div>
+                <button class="view-details-btn">View Details</button>
+            </div>
+
+            <!-- Picsart Card -->
+            <div class="output-card picsart-card">
+                <div class="card-header">Picsart</div>
+                <div class="output-image">
+                    <img src="imgae.jpg" alt="Picsart Image">
+                </div>
+                <div class="objective-section">
+                    <h3>Objective Scores</h3>
+                    <div class="metric-row">
+                        <span>Sharpness:</span>
+                        <span>70</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Brightness:</span>
+                        <span>80</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Blur:</span>
+                        <span>60</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Denoise:</span>
+                        <span>85</span>
+                    </div>
+                </div>
+                <div class="subjective-section">
+                    <h3>Subjective Score</h3>
+                    <div class="subjective-score">75</div>
+                </div>
+                <div class="total-score-section">
+                    <h3>Total Score</h3>
+                    <div class="total-score">77.5</div>
+                </div>
+                <button class="view-details-btn">View Details</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparative Evaluation Tab Content -->
+    <div id="comparison" class="tab-content">
+        <h2>Comparative Evaluation</h2>
+    
+        <div class="comparison-grid">
+            <!-- Grouped Bar Plot Card 1 -->
+            <div class="comparison-card">
+                <h3>Grouped Bar Plot for Individual App Performance</h3>
+                <img src="group-plot.png" alt="Grouped Bar Plot" width="300px">
+                <p>These are the normalized values of all 4 parameters: Sharpness, Brightness, Blur, and De-noise.</p>
+            </div>
+
+            <!-- Grouped Bar Plot Card 2 -->
+            <div class="comparison-card">
+                <h3>Bar Plot for Individual App Performance</h3>
+                <img src="bar.png" alt="Bar Plot" width="300px">
+                <p>These are the normalized values of all 4 parameters: Sharpness, Brightness, Blur, and De-noise.</p>
+            </div>
+
+            <!-- Line Plot Card -->
+            <div class="comparison-card">
+                <h3>Individual Scores (Line Plot)</h3>
+                <img src="line-plot.png" alt="Line Plot" width="300px">
+            </div>
+
+            <!-- Overall Performance Table Card -->
+            <div class="comparison-card">
+                <h3>Overall Performance</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>App</th>
+                            <th>Sharpness Score</th>
+                            <th>Brightness Score</th>
+                            <th>Blur Score</th>
+                            <th>Denoise Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Samsung Enhance-X</td>
+                            <td>4.3</td>
+                            <td>2.4</td>
+                            <td>2</td>
+                            <td>4.3</td>
+                        </tr>
+                        <tr>
+                            <td>Pics Art</td>
+                            <td>2.5</td>
+                            <td>4.4</td>
+                            <td>2</td>
+                            <td>2.3</td>
+                        </tr>
+                        <tr>
+                            <td>Snapseed</td>
+                            <td>3.5</td>
+                            <td>1.8</td>
+                            <td>3</td>
+                            <td>3.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>This project is part of the PRISM Internship Program. It's been developed under the guidance of our esteemed mentors.</p>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contact Info</h3>
+                <p>Email: support@prism-intern.com</p>
+                <p>Phone: +91-123-456-7890</p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#processing">Image Processing</a></li>
+                    <li><a href="#comparison">Comparative Evaluation</a></li>
+                    <li><a href="#report">Comprehensive Report</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024, Made by PRISM-Intern | Mentors: Rahul Sir and Hemalatha M Ma'am</p>
+        </div>
+    </footer>
+
+    <script src="new.js"></script>
+
+</body>
